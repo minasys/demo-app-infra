@@ -5,7 +5,8 @@ metadata:
 namespace: demo-app-dev
 nameSuffix: -dev
 resources:
-- eksa-cluster.yaml
+- dev-cluster.yaml
+- w01-cluster.yaml
 - ../../bases/demo-app
 - namespace.yaml
 # transformers:
