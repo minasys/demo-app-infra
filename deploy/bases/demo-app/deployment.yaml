@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello-eks-a
-  #namespace: test-application
+  namespace: demo-app
   labels:
     app: hello-eks-a
 spec:
