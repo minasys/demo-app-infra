@@ -9,6 +9,8 @@ resources:
 - w01-cluster.yaml
 - ../../bases/demo-app
 - namespace.yaml
+- deployment.yaml
+- service.yaml
 # transformers:
 # - labels.yaml
 replicas:
