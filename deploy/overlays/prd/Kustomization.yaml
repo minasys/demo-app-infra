@@ -8,8 +8,8 @@ resources:
 - ../../bases/demo-app
 - namespace.yaml
 - prd-cluster.yaml
-transformers:
-- labels.yaml
+# transformers:
+# - labels.yaml
 replicas:
 - count: 3
   # name of deployment
