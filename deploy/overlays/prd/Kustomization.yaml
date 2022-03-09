@@ -6,10 +6,10 @@ namespace: demo-app
 nameSuffix: -prd
 resources:
 #- ../../bases/demo-app
-- w01-cluster.yaml
-- namespace.yaml
-- deployment.yaml
-- service.yaml
+# - w01-cluster.yaml
+# - namespace.yaml
+# - deployment.yaml
+# - service.yaml
 transformers:
 - labels.yaml
 replicas:
