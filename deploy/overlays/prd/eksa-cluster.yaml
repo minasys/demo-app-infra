@@ -1,7 +1,9 @@
 apiVersion: anywhere.eks.amazonaws.com/v1alpha1
 kind: Cluster
 metadata:
-  name: prd-cluster
+  annotations:
+    anywhere.eks.amazonaws.com/managed-by: dev-cluster
+  name: w01-cluster
   namespace: default
 spec:
   clusterNetwork:
@@ -16,21 +18,21 @@ spec:
     count: 1
   datacenterRef:
     kind: DockerDatacenterConfig
-    name: prd-cluster
+    name: dev-cluster
   externalEtcdConfiguration:
     count: 1
   kubernetesVersion: "1.21"
   managementCluster:
-    name: prd-cluster
+    name: dev-cluster
   workerNodeGroupConfigurations:
-  - count: 1
+  - count: 2
     name: md-0
 
 ---
 apiVersion: anywhere.eks.amazonaws.com/v1alpha1
 kind: DockerDatacenterConfig
 metadata:
-  name: prd-cluster
+  name: w01-cluster
   namespace: default
 spec: {}
 
