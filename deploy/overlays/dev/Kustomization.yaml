@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: demo-app-dev
 nameSuffix: -dev
 resources:
+- eksa-cluster.yaml
 - ../../bases/demo-app
 - namespace.yaml
 # transformers:
