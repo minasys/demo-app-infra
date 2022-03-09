@@ -6,8 +6,8 @@ resources:
 - eksa-cluster.yaml
 - ../../bases/demo-app
 - namespace.yaml
-# transformers:
-# - labels.yaml
+transformers:
+- labels.yaml
 replicas:
 - count: 3
   # name of deployment
