@@ -23,7 +23,7 @@ spec:
   managementCluster:
     name: prd-cluster
   workerNodeGroupConfigurations:
-  - count: 4
+  - count: 3
     name: md-0
 
 ---
