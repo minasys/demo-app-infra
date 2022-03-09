@@ -6,14 +6,14 @@ namespace: demo-app
 nameSuffix: -prd
 resources:
 #- ../../bases/demo-app
-# - w01-cluster.yaml
+- prd-cluster.yaml
 # - namespace.yaml
 # - deployment.yaml
 # - service.yaml
-transformers:
-- labels.yaml
+# transformers:
+# - labels.yaml
 replicas:
-- count: 3
+- count: 2
   # name of deployment
   name: hello-eks-a
 ## if this image used, replace it with this tag
