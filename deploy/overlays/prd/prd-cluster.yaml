@@ -1,0 +1,37 @@
+apiVersion: anywhere.eks.amazonaws.com/v1alpha1
+kind: Cluster
+metadata:
+  name: prd-cluster
+  namespace: default
+spec:
+  clusterNetwork:
+    cni: cilium
+    pods:
+      cidrBlocks:
+      - 192.168.0.0/16
+    services:
+      cidrBlocks:
+      - 10.96.0.0/12
+  controlPlaneConfiguration:
+    count: 1
+  datacenterRef:
+    kind: DockerDatacenterConfig
+    name: prd-cluster
+  externalEtcdConfiguration:
+    count: 1
+  kubernetesVersion: "1.21"
+  managementCluster:
+    name: prd-cluster
+  workerNodeGroupConfigurations:
+  - count: 4
+    name: md-0
+
+---
+apiVersion: anywhere.eks.amazonaws.com/v1alpha1
+kind: DockerDatacenterConfig
+metadata:
+  name: prd-cluster
+  namespace: default
+spec: {}
+
+---
